@@ -1,4 +1,3 @@
-import { Toaster } from "react-hot-toast";
 import "./App.css";
 
 import { Inicio } from "./components/inicio.jsx";
