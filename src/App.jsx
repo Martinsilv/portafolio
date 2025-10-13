@@ -1,10 +1,9 @@
+import { Toaster } from "react-hot-toast";
 import "./App.css";
 
 import { Inicio } from "./components/inicio.jsx";
 import { Proyects } from "./components/proyects.jsx";
-
 import { Toaster } from "react-hot-toast";
-
 function App() {
   return (
     <>
