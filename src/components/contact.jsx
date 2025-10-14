@@ -1,12 +1,12 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { TypewriterEffect } from "./ui/typeWriterEfect.JSX";
 import { BackgroundBeams } from "./ui/background-beams";
 import emailjs from "emailjs-com";
-import toast from "react-hot-toast";
 import RewardButton from "./ui/rewardButton";
 
 export const Contact = () => {
   const form = useRef();
+  const [alert, setAlert] = useState({ show: false, type: "", message: "" });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -19,12 +19,23 @@ export const Contact = () => {
         "9kQ-UbE1ydNBQ05nu"
       )
       .then(() => {
-        toast.success("¡Mensaje enviado con éxito! ");
+        setAlert({
+          show: true,
+          type: "success",
+          message: "¡Mensaje enviado con éxito!",
+        });
         form.current.reset();
       })
       .catch(() => {
-        toast.error("Hubo un error al enviar el mensaje. ");
+        setAlert({
+          show: true,
+          type: "error",
+          message: "Hubo un error al enviar el mensaje.",
+        });
       });
+
+    // Oculta el mensaje después de 3 segundos
+    setTimeout(() => setAlert({ show: false, type: "", message: "" }), 3000);
   };
 
   return (
@@ -32,6 +43,8 @@ export const Contact = () => {
       className="relative min-h-screen bg-zinc-950 overflow-hidden z-0"
       id="contacto"
     >
+      <BackgroundBeams className="absolute inset-0 opacity-30" />
+
       <div className="relative z-10 flex flex-col items-center justify-center pt-28">
         <TypewriterEffect
           words={[{ text: "Contacto" }]}
@@ -77,6 +90,17 @@ export const Contact = () => {
           <RewardButton text="Enviar" />
         </div>
       </form>
+
+      {/* 🔔 Alerta flotante */}
+      {alert.show && (
+        <div
+          className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-xl text-white shadow-lg transition-all duration-300 ${
+            alert.type === "success" ? "bg-green-600" : "bg-red-600"
+          }`}
+        >
+          {alert.message}
+        </div>
+      )}
     </div>
   );
 };
