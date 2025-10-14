@@ -1,7 +1,7 @@
 import { AnimatedTooltip } from "./ui/unimated-toolTip";
 import htmlIcon from "../assets/html5-brands.svg";
 import cssIcon from "../assets/css-3.png";
-import jsicon from "../assets/javascript.png";
+import jsicon from "../assets/javaScript.png";
 import reactIcon from "../assets/react-brands.svg";
 import githubIcon from "../assets/github.png";
 import tailwindIcon from "../assets/Tailwind-CSS.png";
