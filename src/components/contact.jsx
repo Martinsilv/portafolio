@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { TypewriterEffect } from "./ui/typeWriterEfect.JSX";
+import { TypewriterEffect } from "./ui/typeWriterEfect.jsx";
 import { BackgroundBeams } from "./ui/background-beams";
 
 import RewardButton from "./ui/rewardButton";

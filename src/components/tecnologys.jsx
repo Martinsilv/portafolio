@@ -12,7 +12,7 @@ import bootstrapIcon from "../assets/Bootstrap.png";
 import firebaseIcon from "../assets/Firebase.png";
 import wordpressIcon from "../assets/wordpress.png";
 
-import { TypewriterEffect } from "./ui/typeWriterEfect.JSX";
+import { TypewriterEffect } from "./ui/typeWriterEfect.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 export const Tecnologys = () => {

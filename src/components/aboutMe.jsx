@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import imagen1 from "../assets/martin1.jpeg";
-import { TypewriterEffect } from "./ui/typeWriterEfect.JSX";
+import { TypewriterEffect } from "./ui/typeWriterEfect.jsx";
 import ScrollReveal from "./ui/title-efect";
 import {
   Currency,
