@@ -1,8 +1,9 @@
 import { useRef, useState } from "react";
 import { TypewriterEffect } from "./ui/typeWriterEfect.JSX";
 import { BackgroundBeams } from "./ui/background-beams";
-import emailjs from "emailjs-com";
+
 import RewardButton from "./ui/rewardButton";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
   const form = useRef();
